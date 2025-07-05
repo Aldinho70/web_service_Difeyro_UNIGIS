@@ -1,0 +1,105 @@
+Autenticación exitosa
+<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+            <SystemUser>JornadaDigital</SystemUser>
+            <Password>XAL963mbf</Password>
+            <Dominio>TR-02_migracion</Dominio>
+            <NroSerie>-1</NroSerie>
+            <Codigo>123</Codigo>
+            <Latitud>-103.4455</Latitud>
+            <Longitud>25.6133333333</Longitud>
+            <Altitud>0</Altitud>
+            <Velocidad>0</Velocidad>
+            <FechaHoraEvento>2025-07-05T18:49:20.079Z</FechaHoraEvento>
+            <FechaHoraRecepcion>2025-07-05T18:49:20.080Z</FechaHoraRecepcion>
+        </LoginYInsertarEvento>
+    </soap:Body>
+    </soap:Envelope>
+[TR-02_migracion]: Registro exitoso en UNIGIS, codigo de respuesta: [225605395]
+<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+            <SystemUser>JornadaDigital</SystemUser>
+            <Password>XAL963mbf</Password>
+            <Dominio>TR-08_migracion</Dominio>
+            <NroSerie>-1</NroSerie>
+            <Codigo>123</Codigo>
+            <Latitud>-103.684</Latitud>
+            <Longitud>25.4228333333</Longitud>
+            <Altitud>0</Altitud>
+            <Velocidad>9</Velocidad>
+            <FechaHoraEvento>2025-07-05T18:49:20.443Z</FechaHoraEvento>
+            <FechaHoraRecepcion>2025-07-05T18:49:20.443Z</FechaHoraRecepcion>
+        </LoginYInsertarEvento>
+    </soap:Body>
+    </soap:Envelope>
+[TR-08_migracion]: Registro exitoso en UNIGIS, codigo de respuesta: [225605490]
+<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+            <SystemUser>JornadaDigital</SystemUser>
+            <Password>XAL963mbf</Password>
+            <Dominio>TR-10_migracion</Dominio>
+            <NroSerie>-1</NroSerie>
+            <Codigo>123</Codigo>
+            <Latitud>-103.614833333</Latitud>
+            <Longitud>25.6941666667</Longitud>
+            <Altitud>0</Altitud>
+            <Velocidad>0</Velocidad>
+            <FechaHoraEvento>2025-07-05T18:49:20.620Z</FechaHoraEvento>
+            <FechaHoraRecepcion>2025-07-05T18:49:20.620Z</FechaHoraRecepcion>
+        </LoginYInsertarEvento>
+    </soap:Body>
+    </soap:Envelope>
+[TR-10_migracion]: Registro exitoso en UNIGIS, codigo de respuesta: [225605583]
+<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+            <SystemUser>JornadaDigital</SystemUser>
+            <Password>XAL963mbf</Password>
+            <Dominio>TR-11_migracion</Dominio>
+            <NroSerie>-1</NroSerie>
+            <Codigo>123</Codigo>
+            <Latitud>-103.488166667</Latitud>
+            <Longitud>24.439</Longitud>
+            <Altitud>0</Altitud>
+            <Velocidad>0</Velocidad>
+            <FechaHoraEvento>2025-07-05T18:49:20.796Z</FechaHoraEvento>
+            <FechaHoraRecepcion>2025-07-05T18:49:20.796Z</FechaHoraRecepcion>
+        </LoginYInsertarEvento>
+    </soap:Body>
+    </soap:Envelope>
+[TR-11_migracion]: Registro exitoso en UNIGIS, codigo de respuesta: [225605683]
+<?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+            <SystemUser>JornadaDigital</SystemUser>
+            <Password>XAL963mbf</Password>
+            <Dominio>TR-12_migracion</Dominio>
+            <NroSerie>-1</NroSerie>
+            <Codigo>123</Codigo>
+            <Latitud>-98.7456666667</Latitud>
+            <Longitud>20.0695</Longitud>
+            <Altitud>0</Altitud>
+            <Velocidad>0</Velocidad>
+            <FechaHoraEvento>2025-07-05T18:49:21.034Z</FechaHoraEvento>
+            <FechaHoraRecepcion>2025-07-05T18:49:21.034Z</FechaHoraRecepcion>
+        </LoginYInsertarEvento>
+    </soap:Body>
+    </soap:Envelope>
