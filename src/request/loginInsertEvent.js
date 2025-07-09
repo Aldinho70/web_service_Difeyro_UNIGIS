@@ -18,26 +18,26 @@ const PASSWORD = process.env.PASSWORD_UNIGIS;
 
 export const loginInsertEventXML = (data) => {
 
-return `<?xml version="1.0" encoding="utf-8"?>
-    <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-    <soap:Body>
-        <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
-            <SystemUser>${USER}</SystemUser>
-            <Password>${PASSWORD}</Password>
-            <Dominio>${data.name || ""}</Dominio>
-            <NroSerie>${-1}</NroSerie>
-            <Codigo>${"123"}</Codigo>
-            <Latitud>${data.latitude}</Latitud>
-            <Longitud>${data.longitude}</Longitud>
-            <Altitud>${data.Altitud || 0}</Altitud>
-            <Velocidad>${data.speed || 0}</Velocidad>
-            <FechaHoraEvento>${new Date().toISOString()}</FechaHoraEvento>
-            <FechaHoraRecepcion>${new Date().toISOString()}</FechaHoraRecepcion>
-        </LoginYInsertarEvento>
-    </soap:Body>
-    </soap:Envelope>`;
+    return `<?xml version="1.0" encoding="utf-8"?>
+        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+        <soap:Body>
+            <LoginYInsertarEvento xmlns="http://unisolutions.com.ar/">
+                <SystemUser>${USER}</SystemUser>
+                <Password>${PASSWORD}</Password>
+                <Dominio>${data.name || ""}</Dominio>
+                <NroSerie>${data.device_id}</NroSerie>
+                <Codigo>${"123"}</Codigo>
+                <Latitud>${data.latitude}</Latitud>
+                <Longitud>${data.longitude}</Longitud>
+                <Altitud>${data.Altitud || 0}</Altitud>
+                <Velocidad>${data.speed || 0}</Velocidad>
+                <FechaHoraEvento>${data.date}</FechaHoraEvento>
+                <FechaHoraRecepcion>${data.date}</FechaHoraRecepcion>
+            </LoginYInsertarEvento>
+        </soap:Body>
+        </soap:Envelope>`;
 };
  
 

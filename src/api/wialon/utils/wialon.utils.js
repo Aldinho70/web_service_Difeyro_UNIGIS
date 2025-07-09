@@ -75,21 +75,23 @@ export function parseDateTime(timestamp) {
 /**
  * Desestrucuturar las respuesta de getInfoDevice
  */
+import { sens_name } from "../../../../config.js";
 
 export const destructWialon = async (data) => {
-  const deviceInfoList = [];
-  data.map( element => {
+    const deviceInfoList = [];
+    const { batery, odometer, temp , fuel } = sens_name;
+    data.map( element => {
     const REGEX_IGNITION = /(I(GN|GN|N)?(I|IN)?(CI)?(Ó|O)N?)/i;
     
     const { nm, id, pos, prms, netconn, lmsg, sens  } = element;
     const { y, x, s, t } = pos;
     const { p } = lmsg;
-    const { pwr_ext } = p;
+    // const { [batery] : _batery } = p;
     const lat = decimalToDMS( y );
     const lon = decimalToDMSLong( x );
     const time = parseDateTime(t); 
     let params_sens_ignition;
-    
+
     Object.values(sens).forEach((sens) => {
         const { n, p } = sens; 
         if ( REGEX_IGNITION.test(n) || n == 'IGN') {
@@ -98,17 +100,22 @@ export const destructWialon = async (data) => {
     });
 
     const ignition = prms[params_sens_ignition].v;
+    const date = new Date( t * 1000 );
 
     deviceInfoList.push ({ 
         name: nm,
         device_id: id,
         timestamp: t,
+        date: date.toISOString(),
         latitude: x,
         longitude: y,
         speed : s,
-        ignicion: ignition,
-        power_ext : pwr_ext,
-        network_connection: netconn,
+        power_ext : p[batery],
+        odometer : p[odometer],
+        fuel: p[fuel],
+        temperature: p[temp],
+        ignicion: (ignition === 1) ? `(${ignition}): Encendido` : `(${ignition}): Apagado`,
+        network_connection: (netconn === 1) ? `(${netconn}): Conexion correcta` : `(${netconn}): Sin conexion`,
         login: `#L#${id};NA`,
         fulldata: `#D#${time};${lat};N;${lon};W;${s};0;0;21;NA;NA;NA;NA;NA;ignition:1:${ignition},network_connection:1:${netconn}`,
     });

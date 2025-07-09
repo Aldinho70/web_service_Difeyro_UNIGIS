@@ -13,7 +13,14 @@ const init = async () => {
       
       const responseLoginInsertEvent = await soapRequest( loginInsertEventXML(unit), nameMethod );
       if( responseLoginInsertEvent > 0 ){
-        console.log( `[${unit.name}]: Registro exitoso en UNIGIS, codigo de respuesta: [${responseLoginInsertEvent}], timestamp:{${unit.timestamp}}` );
+        console.log(
+          `%c[${unit.name}]%c: Registro exitoso en UNIGIS, código de respuesta: %c[${responseLoginInsertEvent}]`,
+          'color: #2196f3; font-weight: bold;',   // estilo del nombre de la unidad
+          'color: white;',                        // estilo del texto normal
+          'color: #4caf50; font-weight: bold;'    // estilo del código de respuesta
+        );
+
+        console.table( unit );
       }else{
         console.log( `[${unit.name}]: Error de registro en UNIGIS, timestamp:{${unit.timestamp}}` );
       }
